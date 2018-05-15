@@ -1,0 +1,7 @@
+---
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: ncatelli/test-kitchen
+    auto_tag: true
+    secrets: [ docker_username, docker_password ]
