@@ -8,7 +8,18 @@ WORKDIR /build
 
 COPY Gemfile ./Gemfile
 COPY start.sh /usr/local/bin/start.sh
-RUN apk add --no-cache ruby ruby-dev ruby-rdoc ruby-irb ruby-bundler libc-dev gcc g++ make && \
+RUN apk add --no-cache ruby \
+                       ruby-dev \
+                       ruby-rdoc \
+                       ruby-irb \
+                       ruby-bundler \
+                       libc-dev \
+                       gcc \
+                       g++ \
+                       make \
+                       autoconf \
+                       automake \
+                       libtool && \
     chmod +x /usr/local/bin/start.sh
 
 CMD [ "/usr/local/bin/start.sh" ]
